@@ -38,6 +38,9 @@ h1 {
     font-size: 100px;
     padding: 10px;
 }
+h3{
+    padding: 10px 0 0 10px;
+}
 #theme-toggle {
     cursor: pointer;
 }
@@ -76,5 +79,37 @@ body.dark-mode {
     font-size: 24px;
     z-index: 1001; /* Ensure button is on top too */
 }
+/* Works section styles */
+#works {
+    display: flex;
+    flex-direction: row; /* Horizontal scrolling layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color:rgb(35, 26, 106);
+    
+}
+#works .cell {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-width: 180px; 
+    margin-right: 20px; 
+    
+}
 
+#works img {
+    max-width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+#works dt, #works dd {
+    text-align: center; 
+    margin-top: 10px; 
+    line-height: 1;
+    padding-bottom: 10px;
+}
 

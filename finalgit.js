@@ -34,3 +34,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+//Works img grayscale transition
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll("#works img");
+
+  images.forEach(img => {
+      // Add event listener for when the mouse enters the image
+      img.addEventListener("mouseenter", function() {
+          this.style.filter = "grayscale(100%)"; // Apply grayscale filter
+      });
+
+      // Add event listener for when the mouse leaves the image
+      img.addEventListener("mouseleave", function() {
+          this.style.filter = "none"; // Remove grayscale filter
+      });
+  });
+}); 
