@@ -1,4 +1,4 @@
 # FinalGIT417
-/*Anais Pease
+© Anais Pease
 GIT 417: Final Project
-Fall 2024*/
+Fall 2024
