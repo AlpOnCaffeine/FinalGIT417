@@ -134,7 +134,6 @@ body.dark-mode {
     padding: 20px;
     background-color: rgb(156, 166, 203);
 }
- 
 #sweepstakeMsg{
    text-align: center;
    margin: 0.25em auto;
@@ -171,7 +170,7 @@ label, input, textarea {
 }
 
 span {
-    color: red;
+    color: var(--blue);
     font-size: 0.9rem;
 }
 button {
@@ -194,3 +193,4 @@ button:hover {
 button:active {
     background-color: #1e7e34; /* Even darker green on click */
 }
+
