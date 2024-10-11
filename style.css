@@ -193,4 +193,38 @@ button:hover {
 button:active {
     background-color: #1e7e34; /* Even darker green on click */
 }
+/*Carousel for h1*/
+.header-container {
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text wrapping */
+    width: 100%; /* Make sure the container takes the full width */
+  }
+  
+  #Moth {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%); /* Start outside from the right */
+      opacity: 0; /* Invisible when starting */
+    }
+    10% {
+      opacity: 1; /* Fade in */
+    }
+    70% {
+      transform: translateX(-100%); /* Move all the way to the left */
+      opacity: 1; /* Stay visible during movement */
+    }
+    80% {
+      opacity: 0; /* Fade out near the end */
+    }
+    100% {
+      transform: translateX(-100%); /* End outside the left */
+      opacity: 0; /*keeps it from reappearing on the left*/
+    }
+  }
+  
+
 
