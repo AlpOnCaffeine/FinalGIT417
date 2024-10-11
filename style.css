@@ -6,7 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     max-width: 1280px;
-    background-color: rgb(156, 166, 203);
 }
 header {
     position: relative;
@@ -14,20 +13,22 @@ header {
     padding: 10px;
 }
 body {
-    background-color: var(--background-color);
+    background-color: rgb(156, 166, 203);
     color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    
+    text-align: center;    
 }
 p{
     letter-spacing: 1px;
-    padding: 20px;
+    padding: 0 60px 0 60px;
     line-height: 1.5;
     text-align: left;
+}
+h2{
+    margin: 20px 0 10px 0;
 }
 h1 {
     font-family: 'Edu AU VIC WA NT Dots', cursive;
@@ -60,7 +61,6 @@ body.dark-mode {
     left: 0;
     top: 0;
     width: 100px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it appears in front */
 }
 /* Hide the menu initially */
@@ -73,7 +73,20 @@ body.dark-mode {
     cursor: pointer;
     font-size: 24px;
     z-index: 1001; /* Ensure button is on top too */
+    background-color: transparent;
+    color: inherit;
 }
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar ul li {
+    margin-bottom: 10px; /* Adjust this value for more or less space */
+}
+
 /* Works section styles */
 #works {
     display: flex;
@@ -111,13 +124,17 @@ body.dark-mode {
     font-size: 1.5rem;
     height: 2em;
     width: fit-content;
-    padding-left: 20px;
+    padding: 20px;
     text-align: center;
     color: var(--dark-gray);
 }
-#Sweepstake{
-    max-width: 50%;
-}  
+#Sweepstake, #contactForm {
+    width: 50%; /* Ensure they take up exactly 50% of the container */
+    box-sizing: border-box; 
+    padding: 20px;
+    background-color: rgb(156, 166, 203);
+}
+ 
 #sweepstakeMsg{
    text-align: center;
    margin: 0.25em auto;
@@ -126,12 +143,27 @@ body.dark-mode {
   span{
 	color: var(--blue);
 }
-/*Styles for the form*/
+/* Styles for the div holding the game and form */
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(35, 26, 106);
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#game{
+    margin-top: 45px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
-    padding: 20px;
+    padding: 10px;
+    border: 1px solid rgb(35, 26, 106);
+    border-radius: 5px;
 }
 
 label, input, textarea {
@@ -142,6 +174,23 @@ span {
     color: red;
     font-size: 0.9rem;
 }
+button {
+    background-color: rgb(35, 26, 106);
+    color: #fff;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
 
+button:hover {
+    background-color: #218838; 
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
 
-
+button:active {
+    background-color: #1e7e34; /* Even darker green on click */
+}
