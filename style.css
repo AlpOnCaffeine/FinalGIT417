@@ -23,7 +23,7 @@ body {
 }
 p{
     letter-spacing: 1px;
-    padding: 0 60px 0 60px;
+    padding:  10px 60px 10px 60px;
     line-height: 1.5;
     text-align: left;
 }
@@ -153,6 +153,9 @@ body.dark-mode {
     box-sizing: border-box;
     border-radius: 5px;
 }
+#Sweepstake{
+    border-radius: 5px;
+}
 #game{
     margin-top: 45px;
 }
@@ -163,10 +166,12 @@ form {
     padding: 10px;
     border: 1px solid rgb(35, 26, 106);
     border-radius: 5px;
+    align-items: center;
 }
 
 label, input, textarea {
     margin: 5px 0;
+    max-width: 350px;
 }
 
 span {
