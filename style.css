@@ -89,25 +89,25 @@ body.dark-mode {
 
 /* Works section styles */
 #works {
-    display: flex;
-    flex-direction: row; /* Horizontal scrolling layout */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 10px;
-    white-space: nowrap; /* Prevent text wrapping */
-    background-color:rgb(35, 26, 106);
-    min-height: 450px;
-    min-width: 300px;
+    background-color: rgb(35, 26, 106); /* Background color for the section */
+    padding: 20px;
+    color: white; /* Make text more readable on the dark background */
+    text-align: center; /* Center-align content */
+}
+
+#works h3 {
+    color: white; /* Ensure header text is readable */
+    margin-bottom: 20px; /* Add spacing below the header */
+    font-size: 2rem; /* Increase font size for better visual hierarchy */
 }
 
 /*#works .cell {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    min-width: 180px; 
-    margin-right: 20px; 
-    
-}*/
-
+    min-width: 300px; 
+    margin-right: 20px;     
+}
 #works img {
     max-width: 150px; 
     height: 150px;
@@ -120,18 +120,102 @@ body.dark-mode {
     margin-top: 10px; 
     line-height: 1;
     padding-bottom: 10px;
-}
+}*/
+
+
 /* Styles for the owl carousel */
+.owl-carousel {
+    display: flex;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Add spacing between carousel items */
+    max-height: 400px;
+}
+
 .owl-carousel .cell {
+    display: inline-block;
+    background-color: #ffffff; /* Set a white background for individual items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    padding: 20px;
     text-align: center;
-  }
-  
-  .owl-carousel img {
-    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    min-width: 200px; /* Set a minimum width to ensure visibility */
+    min-height: 250px; /* Set a minimum height to ensure visibility */
+    overflow: hidden;
+}
+
+.owl-carousel .cell:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.owl-carousel img {
+    max-width: 100%; /* Ensure images are responsive */
     height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+    border-radius: 5px; /* Add subtle rounding for images */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.owl-carousel dt {
+    font-size: 1.5rem; /* Price larger */
+    font-weight: bold;
+    color: rgb(35, 26, 106); /* Dark text color */
+    margin-top: 10px;
+}
+
+.owl-carousel dd {
+    font-size: 1rem; /* Description smaller than the price */
+    color: rgb(100, 100, 100); /* Subtle gray text */
+}
+
+/* Navigation Buttons for Owl Carousel */
+.owl-nav button {
+    background-color: rgba(255, 255, 255, 0.7); /* Translucent white background */
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.owl-nav button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
+    transform: scale(1.1); /* Slightly larger */
+}
+
+.owl-nav button.owl-prev::after,
+.owl-nav button.owl-next::after {
+    font-size: 1.5rem; /* Bigger arrow icons */
+    color: rgb(35, 26, 106); /* Match theme color */
+}
+
+/* Dots Pagination */
+.owl-dots {
+    margin-top: 20px; /* Add spacing below the carousel */
+}
+
+.owl-dots .owl-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5); /* Subtle dots */
+    border-radius: 50%; /* Circular dots */
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.owl-dots .owl-dot.active {
+    background-color: rgba(255, 255, 255, 1); /* Bright dots for active state */
+}
+
 /* Styles for the game */
 #random1, #random2{
     display: inline-block;
