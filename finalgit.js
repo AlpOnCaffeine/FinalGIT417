@@ -130,3 +130,24 @@ $(document).ready(function(){
     items: 4  // Adjust this number based on how many you want visible 
     });
   });
+// Storing User information
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Check if there's a stored name and display it
+  const storedName = localStorage.getItem('userName');
+  if (storedName) {
+      document.getElementById('displayUserName').textContent = `Welcome back, ${storedName}!`;
+  }
+
+  // Form submission event
+  document.getElementById('userForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const name = document.getElementById('name').value; // Get the user input
+      if (name) {
+          localStorage.setItem('userName', name); // Store the name in localStorage
+          document.getElementById('displayUserName').textContent = `Welcome, ${name}!`; // Display the name
+          document.getElementById('name').value = ''; // Clear the input field
+      }
+  });
+});
+
