@@ -213,6 +213,31 @@ button:hover {
 button:active {
     background-color: #1e7e34; /* Even darker green on click */
 }
+
+/* Cat facts styles */
+#catFactSection{
+    margin: 5px;
+    padding: 15px;
+    border: 1px solid rgb(35, 26, 106);
+    border-radius: 10px;
+}
+#catFactSection h2 {    
+    color: rgb(35, 26, 106);    
+    margin-bottom: 15px;
+}
+#fetchCatFact {    
+    padding: 10px 15px;    
+    font-size: 16px;    
+    color: #fff;    
+    border-radius: 5px;    
+    cursor: pointer;    
+    transition: background-color 0.3s ease;
+}
+#catFactDisplay {    
+    margin-top: 15px;    
+    font-size: 18px;    
+    color: rgb(35, 26, 106);
+}
 /*Carousel for h1*/
 .header-container {
     overflow: hidden;

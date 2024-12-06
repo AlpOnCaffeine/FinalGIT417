@@ -130,6 +130,7 @@ $(document).ready(function(){
     items: 4  // Adjust this number based on how many you want visible 
     });
   });
+
 // Storing User information
 document.addEventListener('DOMContentLoaded', (event) => {
   // Check if there's a stored name and display it
@@ -149,5 +150,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
           document.getElementById('name').value = ''; // Clear the input field
       }
   });
+});
+
+// API Content
+document.getElementById('fetchCatFact').addEventListener('click', function() {
+  fetch('https://catfact.ninja/fact')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+      })
+      .then(data => {
+          const catFactDisplay = document.getElementById('catFactDisplay');
+          catFactDisplay.textContent = data.fact;
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
 });
 
