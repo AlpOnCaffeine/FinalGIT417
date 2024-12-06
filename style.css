@@ -101,7 +101,7 @@ body.dark-mode {
     font-size: 2rem; /* Increase font size for better visual hierarchy */
 }
 
-/*#works .cell {
+#works .cell {
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -120,7 +120,7 @@ body.dark-mode {
     margin-top: 10px; 
     line-height: 1;
     padding-bottom: 10px;
-}*/
+}
 
 
 /* Styles for the owl carousel */

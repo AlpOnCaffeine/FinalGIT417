@@ -119,4 +119,6 @@ if (valid) {
 
 //JS for part two of GIT418
 // Owl carousel for works section
-
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
