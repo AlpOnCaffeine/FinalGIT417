@@ -123,11 +123,11 @@ if (valid) {
 $(document).ready(function(){
   $("#slider").owlCarousel({
     margin: 10,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2000,
+    loop: true, // loops images when the end is reached
+    autoplay: true, // autoplay the slides through the carousel
+    autoplayTimeout: 2000, // sets movement to 2 seconds
     autoplayHoverPause: false,
-    items: 4  // Adjust this number based on how many you want visible 
+    items: 5  // number of items appearing in the carousel
     });
   });
 
