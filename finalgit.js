@@ -1,4 +1,5 @@
 "use strict";
+
 // Light and dark themes loaded
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
@@ -120,5 +121,12 @@ if (valid) {
 //JS for part two of GIT418
 // Owl carousel for works section
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+  $("#slider").owlCarousel({
+    margin: 10,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: false,
+    items: 4  // Adjust this number based on how many you want visible 
+    });
+  });

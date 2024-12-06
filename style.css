@@ -90,9 +90,9 @@ body.dark-mode {
 /* Works section styles */
 #works {
     background-color: rgb(35, 26, 106); /* Background color for the section */
-    padding: 20px;
     color: white; /* Make text more readable on the dark background */
     text-align: center; /* Center-align content */
+    height: 400px;
 }
 
 #works h3 {
@@ -102,16 +102,17 @@ body.dark-mode {
 }
 
 #works .cell {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    min-width: 300px; 
-    margin-right: 20px;     
+    display: inline-block; 
+    width: 150px; /* Ensure items take their natural width */
+    margin: 5px;
+    vertical-align: top;
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    display: inline-block; /* Ensures that the images are inline*/   
 }
 #works img {
-    max-width: 150px; 
-    height: 150px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
     margin-top: 35px;
     cursor: pointer;
 }
@@ -121,99 +122,15 @@ body.dark-mode {
     line-height: 1;
     padding-bottom: 10px;
 }
-
-
-/* Styles for the owl carousel */
-.owl-carousel {
-    display: flex;
-    visibility: visible;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; /* Add spacing between carousel items */
-    max-height: 400px;
-}
-
 .owl-carousel .cell {
-    display: inline-block;
-    background-color: #ffffff; /* Set a white background for individual items */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    min-width: 200px; /* Set a minimum width to ensure visibility */
-    min-height: 250px; /* Set a minimum height to ensure visibility */
-    overflow: hidden;
+    display: inline-block; /* Ensures items are inline */    
+    width: 150px; 
+    vertical-align: top;
+    margin: 5px; /* Space between items */
 }
-
-.owl-carousel .cell:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
-
-.owl-carousel img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto;
-    border-radius: 5px; /* Add subtle rounding for images */
-    margin-bottom: 15px; /* Space between image and text */
-}
-
-.owl-carousel dt {
-    font-size: 1.5rem; /* Price larger */
-    font-weight: bold;
-    color: rgb(35, 26, 106); /* Dark text color */
-    margin-top: 10px;
-}
-
-.owl-carousel dd {
-    font-size: 1rem; /* Description smaller than the price */
-    color: rgb(100, 100, 100); /* Subtle gray text */
-}
-
-/* Navigation Buttons for Owl Carousel */
-.owl-nav button {
-    background-color: rgba(255, 255, 255, 0.7); /* Translucent white background */
-    border: none;
-    border-radius: 50%; /* Circular buttons */
-    width: 40px;
-    height: 40px;
-    display: flex;
+.owl-carousel .owl-stage {    
+    display: flex;    
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.owl-nav button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
-    transform: scale(1.1); /* Slightly larger */
-}
-
-.owl-nav button.owl-prev::after,
-.owl-nav button.owl-next::after {
-    font-size: 1.5rem; /* Bigger arrow icons */
-    color: rgb(35, 26, 106); /* Match theme color */
-}
-
-/* Dots Pagination */
-.owl-dots {
-    margin-top: 20px; /* Add spacing below the carousel */
-}
-
-.owl-dots .owl-dot {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.5); /* Subtle dots */
-    border-radius: 50%; /* Circular dots */
-    display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.owl-dots .owl-dot.active {
-    background-color: rgba(255, 255, 255, 1); /* Bright dots for active state */
 }
 
 /* Styles for the game */
