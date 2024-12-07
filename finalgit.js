@@ -122,11 +122,11 @@ if (valid) {
 // Owl carousel for works section
 $(document).ready(function(){
   $("#slider").owlCarousel({
-    margin: 10,
+    margin: 10, // margin of 10 all sides of carousel
     loop: true, // loops images when the end is reached
     autoplay: true, // autoplay the slides through the carousel
     autoplayTimeout: 2000, // sets movement to 2 seconds
-    autoplayHoverPause: false,
+    autoplayHoverPause: false, // does not stops autoplay when hovering over the carousel 
     items: 5  // number of items appearing in the carousel
     });
   });
