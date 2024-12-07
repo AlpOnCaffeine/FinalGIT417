@@ -1,22 +1,32 @@
 "use strict";
 
 // Light and dark themes loaded
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
+const themeToggle = document.getElementById('theme-toggle'); // Get the button that toggles the theme
+const themeIcon = document.getElementById('theme-icon'); // Get the icon element that represents the current theme
+// Get the current theme from localStorage or default to 'light' if not set
 const currentTheme = localStorage.getItem('theme') || 'light';
+// Check the current theme and apply it to the page
   if (currentTheme === 'dark') {
+    // Add the 'dark-mode' class to the body to apply dark mode styling
     document.body.classList.add('dark-mode');
+    // Update the icon to represent the dark theme (moon icon)
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');
     }
+  // Add an event listener to the theme toggle button to switch between themes
     themeToggle.addEventListener('click', function() {
+  // Toggle the 'dark-mode' class on the body to switch between light and dark modes
       document.body.classList.toggle('dark-mode');
+  // Check if the body has the 'dark-mode' class to determine the current theme
       if (document.body.classList.contains('dark-mode')) {
+         // Update the icon to represent the dark theme (moon icon)
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon')
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // Save the current theme in localStorage as 'dark'
       } else {
+        // Update the icon to represent the light theme (sun icon)
         themeIcon.classList.remove('fa-moon');themeIcon.classList.add('fa-sun');
+        // Save the current theme in localStorage as 'light'
         localStorage.setItem('theme', 'light');
       }
     });
