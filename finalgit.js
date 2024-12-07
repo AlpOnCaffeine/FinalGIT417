@@ -152,20 +152,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
-// API Content
+// Ajax Content
 document.getElementById('fetchCatFact').addEventListener('click', function() {
-  fetch('https://catfact.ninja/fact')
+  fetch('https://catfact.ninja/fact') // Fetch the endpoint for the cat fact
       .then(response => {
+        // check if the response is ok
           if (!response.ok) {
+            // Throw error if response is not ok
               throw new Error('Network response was not ok ' + response.statusText);
           }
-          return response.json();
+          return response.json(); // parse the response as JSON and return it
       })
       .then(data => {
+        // select the element with ID 'catFactDisplay' to show the cat fact
           const catFactDisplay = document.getElementById('catFactDisplay');
+          // update the text content of the element with the fetched fact
           catFactDisplay.textContent = data.fact;
       })
       .catch(error => {
+        // log error to the console if there's an issue with the fetch operation
           console.error('There was a problem with the fetch operation:', error);
       });
 });
